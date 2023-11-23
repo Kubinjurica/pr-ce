@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <title>{%block title%}HLAVNÍ STRÁNKA{%endblock%}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename = 'styles.css') }}">
+</head>
+<body>
+  <div class="nadpisobrazek">
+    <h1>ZVÍŘÁTKA</h1>
+    <a href="{{ url_for('root') }}">
+      <img src="{{ url_for('static', filename='renault.jpeg')}}" class = "obrazek">
+    </a>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="{{ url_for('root') }}">HLAVNÍ STRÁNKA</a></li>
+      <li><a href="{{ url_for('pes') }}">PES</a></li>
+      <li><a href="{{ url_for('kocka') }}">KOČKA</a></li>
+      <li><a href="{{ url_for('krysa') }}">KRYSA</a></li>
+      <li><a href="{{ url_for('admin') }}">ADMIN</a></li>
+    </ul>
+  </nav>
+{% block obsah %}
+
+
+<p class="penis">Zvíře je obvykle označení buď pro jakéhokoliv živočicha, nebo pro živočichy na vyšším stupni vývoje (například jen obratlovce), vyjma člověka. Z filozofického hlediska se jako zvíře obvykle označuje živá bytost, která není ani člověkem, ani božstvem, mytologickou postavou, nadpřirozenou bytostí apod.
+
+</p>
+{% endblock obsah %}
+</body>

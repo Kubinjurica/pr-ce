@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{%block title%}KOCKA{%endblock title%}
+
+{% block obsah %}
+
+<h1>KOČKA</h1>
+<div class="image-with-text">
+    <img src="{{ url_for('static', filename='kocka.jpeg')}}" alt = "obrazek" >
+    <p>Kočka domácí (Felis catus, dříve například Felis silvestris catus) je domestikovaná forma kočky plavé, která je již po tisíciletí průvodcem člověka. Stejně jako její divoká příbuzná patří do podčeledi malé kočky, a je typickým zástupcem skupiny. Má pružné a svalnaté tělo, dokonale přizpůsobené lovu, ostré drápy a zuby a vynikající zrak, sluch a čich. Kočka domácí vždy sloužila člověku především jako lovec hlodavců, uplatňuje se také jako společník a mazlíček člověka.
+
+    V některých oblastech Číny je konzumováno/konzervováno kočičí maso,[1] ve třetím světě je kočka domácí rovněž kožešinovým zvířetem a výrobky z kočičí kožešiny se dostávaly i na evropský trh. V červnu 2007 byl však dovoz kočičí kůže a kožešiny do Evropy zakázán.[2]
+
+    Člověk rozšířil kočku domácí prakticky na všech kontinentech (s výjimkou Antarktidy), na mnoha místech zpětně zdivočela.
+
+    I domácí kočka je obvykle velmi efektivním a schopným lovcem, který dokáže ve svém okolí zahubit velké množství drobných obratlovců (především hlodavců a jiných savců, ale také ptáků, plazů, ryb a dalších).[3]</p>
+</div>
+{% endblock obsah %}
