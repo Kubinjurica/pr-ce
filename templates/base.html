@@ -18,9 +18,18 @@
       <li><a href="{{ url_for('pes') }}">PES</a></li>
       <li><a href="{{ url_for('kocka') }}">KOČKA</a></li>
       <li><a href="{{ url_for('krysa') }}">KRYSA</a></li>
+      <li><a href="{{ url_for('login') }}">LOGIN</a></li>
       <li><a href="{{ url_for('admin') }}">ADMIN</a></li>
     </ul>
   </nav>
+{% if 'user' in session %}
+Uživatel: {{session ['user']}}
+<a href = "{{url_for ('logout')}}">Logout</a>
+{%else%}
+Nikdo není přihlášen
+{%endif%} 
+
+
 {% block obsah %}
 
 

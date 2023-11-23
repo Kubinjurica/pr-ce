@@ -35,3 +35,30 @@ def krysa():
 @app.route("/admin/")
 def admin():
     return render_template("admin.html")
+
+@app.route("/login/", methods=["GET"])
+def login():
+    return render_template("login.html")
+@app.route("/login/", methods = ["POST"])
+def login_post():
+    jmeno = request.form.get("jmeno", "")
+    heslo = request.form.get("heslo", "")
+    url = request.args.get("url", "")
+    if jmeno and heslo == "69420":
+        session["user"] = jmeno
+        flash("Jsi přihlášen!", "success")
+        if url:
+            return redirect(url)
+        else:
+            return redirect(url_for("root"))
+
+    else:
+        flash("Nesprávné přihlašovací údaje!", "error")
+    return redirect(url_for("login", url = url))
+
+
+@app.route("/logout/")
+def logout():
+    session.pop("user", None)
+    flash("Byl jsi odhlášen!", "success")
+    return redirect(url_for("root"))
