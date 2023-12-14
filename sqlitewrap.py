@@ -1,6 +1,4 @@
 import sqlite3
-
-
 class SQLite:
     def __init__(self, file="data.sqlite3"):
         self.file = file
