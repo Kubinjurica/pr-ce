@@ -40,9 +40,9 @@ def vzkazy():
         flash("Pouze pro přihlášené")
         return redirect(url_for("login", url = request.path))
     with SQLite("data.sqlite") as cursor:
-        response = cursor.execute("SELECT login, body, datetime FROM user JOIN message ON user.id = message.user_id ORDER BY datetime DESC")
+        response = cursor.execute("SELECT login, body, datetime, message.id FROM user JOIN message ON user.id = message.user_id ORDER BY datetime DESC")
         response = response.fetchall()
-    return render_template("vzkazy.html", response = response)
+    return render_template("vzkazy.html", response = response,d = datetime.datetime)
 
 @app.route("/vzkazy/", methods = ['POST'])
 def vzkazy_post():

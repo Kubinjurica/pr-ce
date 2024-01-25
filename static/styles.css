@@ -49,3 +49,12 @@ h1 {
   font-size: 30px;
 
 }
+.zprava {
+  background-color: white;
+  padding: 1ex;
+  margin: 1ex 0ex 2ex;
+  border: green 1px solid;
+}
+.zprava .telo {
+margin-left: 7ex;
+}
